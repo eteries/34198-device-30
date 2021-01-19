@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [eteries](https://up.htmlacademy.ru/htmlcss/30/user/34198).
-* Наставник: `Неизвестно`.
+* Студент: [Сергей Яньшин](https://up.htmlacademy.ru/htmlcss/30/user/34198).
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/id208340).
 
 ---
 

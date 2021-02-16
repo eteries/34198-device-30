@@ -1,0 +1,355 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Gilroy"),
+  url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  font-weight: 800;
+  font-style: normal;
+  src: local("Gilroy"),
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Open Sans Light"),
+  url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
+}
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-gray-dark: #dcdcdc;
+  --basic-gray-light: #e5e5e5;
+  --basic-gray-lighter: #ebebeb;
+  --basic-gray-darker: #d9d9d9;
+  --special-gray: #c4c4c4;
+  --special-gray-lighter: #f2f2f2;
+  --special-gray-darker: #eaeaea;
+  --special-green:  #91c92f;
+  --special-pink: #f6dada;
+  --special-yellow: #f7e296;
+  --special-yellow-dark: #f0c52e;
+  --yellow-alpha-50: rgba(240, 197, 46, 0.5);
+  --white-alpha-30: rgba(255, 255, 255, 0.3);
+  --white-alpha-60: rgba(255, 255, 255, 0.6);
+  --black-alpha-30: rgba(0, 0, 0, 0.3);
+  --black-alpha-60: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.page-body {
+  font: 15px/20px "Open Sans", "Arial", sans-serif;
+  color: var(--basic-black);
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.title-1, .title-2, .title-3 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+}
+
+.title-1 {
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.title-2 {
+  font-size: 47px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  color: var(--basic-black);
+  background-color: transparent;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.link:active {
+  opacity: 0.3;
+}
+
+.button {
+  font-family: "Gilroy", "Arial", sans-serif;
+  background: linear-gradient(transparent 16px, var(--special-yellow-dark) 16px, var(--special-yellow-dark) 24px, transparent 24px);
+  color: var(--basic-black);
+  border: none;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: var(--special-yellow-dark);
+  color: var(--basic-black);
+}
+
+.button:active {
+  background: var(--special-yellow-dark);
+  color: var(--black-alpha-30);
+}
+
+/* Main Header */
+
+.main-header {
+  background: linear-gradient(transparent 40px, var(--special-yellow) 40px);
+  color: var(--basic-black);
+}
+
+.link-nav {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+/* Search form */
+
+.search-input {
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: var(--basic-black);
+  vertical-align: center;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--black-alpha-30);
+}
+
+.search-input::placeholder:hover {
+  color: var(--black-alpha-60);
+}
+
+.search-button {
+  font: inherit;
+  background: transparent;
+  color: var(--basic-black);
+  border: 2px solid var(--basic-black);
+  text-transform: uppercase;
+  vertical-align: center;
+  display: none;
+}
+
+.search-button:hover {
+  background: var(--basic-black);
+  color: var(--white-alpha-60);
+}
+
+.search-button:active {
+  background: var(--basic-black);
+  color: var(--white-alpha-30);
+}
+
+form:focus-within .search-button {
+  display: initial;
+}
+
+form:focus-within .search-input::placeholder {
+  opacity: 1;
+}
+
+/* Main footer */
+
+.main-footer {
+  background-color: var(--basic-dark);
+  color: var(--basic-white);
+}
+
+.main-footer .link {
+  color: var(--basic-white);
+}
+
+.main-footer .link-academy {
+  background: transparent;
+  color: var(--special-yellow-dark);
+}
+
+.footer-address {
+  font-style: normal;
+}
+
+.footer-phone,
+.footer-phone:hover,
+.footer-phone:active {
+  color: var(--basic-white);
+}
+
+.social-link {
+  color: var(--basic-white);
+  opacity: 0.3;
+}
+
+.social-link:hover {
+  opacity: 0.6;
+}
+
+.social-link:active {
+  opacity: 0.1;
+}
+
+/* Popular slider  */
+
+.popular-list {
+  counter-reset: li;
+  list-style: none;
+}
+
+.popular-slide:before {
+  content: counter(li, decimal-leading-zero);
+  counter-increment: li;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 179px;
+  line-height: 219px;
+  background: transparent;
+  color: var(--basic-white);
+}
+
+.slider-button {
+  color: var(--basic-black);
+  background: var(--basic-white);
+  border: 1px solid var(--basic-black);
+}
+
+.feature-item {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.feature-title {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.feature-value {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+/* Categories */
+
+.link-img {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
+  background-color: var(--special-yellow);
+}
+
+.link-img:hover,
+.link-img:active {
+  background-color: var(--special-yellow-dark);
+}
+
+/* Advantages slider */
+
+.advantages-section {
+  background: linear-gradient(transparent 115px, var(--basic-gray-light) 115px);
+}
+
+.advantages-button:active,
+.advantages-button.active {
+  background: var(--basic-black);
+  color: var(--special-yellow);
+}
+
+.transportation-list {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* Modal */
+
+.modal {
+  background: var(--basic-white);
+  color: var(--basic-black);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
+}
+
+.close-button {
+  background-color: var(--yellow-alpha-50);
+}
+
+/* Form */
+
+.control {
+  background-color: var(--special-gray-lighter);
+  color: var(--basic-black);
+  border: 2px solid transparent;
+}
+
+.control::placeholder {
+  color: var(--basic-black);
+  opacity: 0.4;
+}
+
+.control:hover {
+  background: var(--special-gray-darker);
+}
+
+.control:focus {
+  border: 2px solid var(--special-yellow-dark);
+  outline: 0;
+}
+
+.control:hover {
+  background: var(--special-gray-darker);
+}
+
+.control:disabled {
+  background: var(--special-pink);
+}
+
+.label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}

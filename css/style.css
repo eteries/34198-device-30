@@ -5,8 +5,8 @@
   font-weight: 300;
   font-style: normal;
   src: local("Gilroy"),
-  url("../fonts/gilroylight.woff2") format("woff2"),
-  url("../fonts/gilroylight.woff") format("woff");
+       url("../fonts/gilroylight.woff2") format("woff2"),
+       url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-weight: 800;
   font-style: normal;
   src: local("Gilroy"),
-  url("../fonts/gilroyextrabold.woff2") format("woff2"),
-  url("../fonts/gilroyextrabold.woff") format("woff");
+       url("../fonts/gilroyextrabold.woff2") format("woff2"),
+       url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 @font-face {
@@ -23,8 +23,8 @@
   font-weight: 300;
   font-style: normal;
   src: local("Open Sans Light"),
-  url("../fonts/opensanslight.woff2") format("woff2"),
-  url("../fonts/opensanslight.woff") format("woff");
+       url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
 }
 
 :root {
@@ -58,7 +58,9 @@ img {
   height: auto;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -70,17 +72,19 @@ img {
   padding: 0;
 }
 
-.title-1, .title-2, .title-3 {
+.title-xxl,
+.title-xl,
+.title-lg {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
 }
 
-.title-1 {
+.title-xxl {
   font-size: 47px;
   line-height: 58px;
 }
 
-.title-2 {
+.title-xl {
   font-size: 47px;
   line-height: 58px;
   letter-spacing: 0.2em;
@@ -118,12 +122,12 @@ img {
 }
 
 .button:hover {
-  background: var(--special-yellow-dark);
+  background-color: var(--special-yellow-dark);
   color: var(--basic-black);
 }
 
 .button:active {
-  background: var(--special-yellow-dark);
+  background-color: var(--special-yellow-dark);
   color: var(--black-alpha-30);
 }
 
@@ -163,7 +167,7 @@ img {
 
 .search-button {
   font: inherit;
-  background: transparent;
+  background-color: transparent;
   color: var(--basic-black);
   border: 2px solid var(--basic-black);
   text-transform: uppercase;
@@ -172,20 +176,20 @@ img {
 }
 
 .search-button:hover {
-  background: var(--basic-black);
+  background-color: var(--basic-black);
   color: var(--white-alpha-60);
 }
 
 .search-button:active {
-  background: var(--basic-black);
+  background-color: var(--basic-black);
   color: var(--white-alpha-30);
 }
 
-form:focus-within .search-button {
+.search-form:focus-within .search-button {
   display: initial;
 }
 
-form:focus-within .search-input::placeholder {
+.search-form:focus-within .search-input::placeholder {
   opacity: 1;
 }
 
@@ -196,12 +200,12 @@ form:focus-within .search-input::placeholder {
   color: var(--basic-white);
 }
 
-.main-footer .link {
+.link-white {
   color: var(--basic-white);
 }
 
 .main-footer .link-academy {
-  background: transparent;
+  background-color: transparent;
   color: var(--special-yellow-dark);
 }
 
@@ -242,13 +246,13 @@ form:focus-within .search-input::placeholder {
   font-weight: 800;
   font-size: 179px;
   line-height: 219px;
-  background: transparent;
+  background-color: transparent;
   color: var(--basic-white);
 }
 
 .slider-button {
   color: var(--basic-black);
-  background: var(--basic-white);
+  background-color: var(--basic-white);
   border: 1px solid var(--basic-black);
 }
 
@@ -292,8 +296,8 @@ form:focus-within .search-input::placeholder {
 }
 
 .advantages-button:active,
-.advantages-button.active {
-  background: var(--basic-black);
+.advantages-button.advantages-button-active {
+  background-color: var(--basic-black);
   color: var(--special-yellow);
 }
 
@@ -307,7 +311,7 @@ form:focus-within .search-input::placeholder {
 /* Modal */
 
 .modal {
-  background: var(--basic-white);
+  background-color: var(--basic-white);
   color: var(--basic-black);
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
 }
@@ -330,20 +334,20 @@ form:focus-within .search-input::placeholder {
 }
 
 .control:hover {
-  background: var(--special-gray-darker);
+  background-color: var(--special-gray-darker);
 }
 
 .control:focus {
-  border: 2px solid var(--special-yellow-dark);
+  border-color: var(--special-yellow-dark);
   outline: 0;
 }
 
 .control:hover {
-  background: var(--special-gray-darker);
+  background-color: var(--special-gray-darker);
 }
 
 .control:disabled {
-  background: var(--special-pink);
+  background-color: var(--special-pink);
 }
 
 .label {

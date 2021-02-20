@@ -72,21 +72,14 @@ img {
   padding: 0;
 }
 
-.title-xxl,
-.title-xl,
-.title-lg {
+.title {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
-}
-
-.title-xxl {
   font-size: 47px;
   line-height: 58px;
 }
 
-.title-xl {
-  font-size: 47px;
-  line-height: 58px;
+.title-spacing-sparse {
   letter-spacing: 0.2em;
 }
 
@@ -356,4 +349,16 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

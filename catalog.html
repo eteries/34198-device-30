@@ -67,7 +67,7 @@
 
   <main>
     <h1 class="title">Моноподы для селфи</h1>
-    <ul class="breadcrumbs">
+    <ul class="breadcrumbs list-reset">
       <li>
         <a class="breadcrumbs-link" href="index.html">Главная</a>
       </li>
@@ -79,8 +79,8 @@
       </li>
     </ul>
 
-    <section>
-      <h2 class="title title-sm">Фильтр:</h2>
+    <section class="filters-section">
+      <h2 class="title title-sm title-spacing-average uppercase">Фильтр:</h2>
       <form method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend class="filters-legend">Стоимость</legend>
@@ -91,7 +91,7 @@
         </fieldset>
         <fieldset>
           <legend class="filters-legend">Цвет</legend>
-          <ul class="checkbox-list list-unset">
+          <ul class="checkbox-list list-reset">
             <li>
               <input class="filter-checkbox" type="checkbox" id="filter-color-black" name="color-black" checked>
               <label class="filter-checkbox-label" for="filter-color-black">Чёрный</label>
@@ -116,7 +116,7 @@
         </fieldset>
         <fieldset>
           <legend class="filters-legend">Bluetooth</legend>
-          <ul class="radio-list list-unset">
+          <ul class="radio-list list-reset">
             <li>
               <input class="filter-radio" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
               <label class="filter-radio-label" for="bluetooth-yes">Есть</label>
@@ -132,30 +132,30 @@
     </section>
 
     <section>
-      <h2 class="title title-sm uppercase">Сортировка:</h2>
+      <h2 class="title title-sm title-spacing-average uppercase">Сортировка:</h2>
       <a class="sorting-link sorting-link-active">По цене</a>
       <a class="sorting-link">По типу</a>
       <a class="sorting-link">По популярности</a>
-      <a class="sorting-link sorting-link-up">По возрастанию</a>
+      <a class="sorting-link sorting-link-up sorting-link-active">По возрастанию</a>
       <a class="sorting-link sorting-link-down">По убыванию</a>
     </section>
 
     <section>
       <h2 class="visually-hidden">Список моноподов для селфи</h2>
-      <ul class="products-list">
+      <ul class="products-list list-reset">
         <li class="product-item">
-          <h3 class="title title-md">
+          <h3 class="title title-md title-spacing-dense">
             <a>Любительская селфи-палка</a>
           </h3>
           <b class="product-price">1 100 руб.</b>
           <img src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
           <p class="product-back">
             <button class="button" type="button">В корзину</button>
-            <button class="link-add-product" type="button">Добавить к сравнению</button>
+            <button class="add-product-link" type="button">Добавить к сравнению</button>
           </p>
         </li>
         <li class="product-item">
-          <h3 class="title title-md">
+          <h3 class="title title-md title-spacing-dense">
             <a>Профессиональная селфи-палка</a>
           </h3>
           <b class="product-price">1 500 руб.</b>
@@ -166,7 +166,7 @@
           </p>
         </li>
         <li class="product-item">
-          <h3 class="title title-md">
+          <h3 class="title title-md title-spacing-dense">
             <a>Непотопляемая селфи-палка</a>
           </h3>
           <b class="product-price">1 500 руб.</b>
@@ -177,7 +177,7 @@
           </p>
         </li>
         <li class="product-item product-item-new">
-          <h3 class="title title-md">
+          <h3 class="title title-md title-spacing-dense">
             <a>Селфи-палка «Следуй за мной»</a>
           </h3>
           <b class="product-price">1 900 руб.</b>
@@ -192,19 +192,19 @@
 
     <ul class="pagination list-reset">
       <li>
-        <a class="pagination-previous">Назад</a>
+        <a class="pagination-link pagination-previous">Назад</a>
       </li>
       <li>
-        <a class="pagination-page pagination-page-active">1</a>
+        <a class="pagination-link pagination-page pagination-page-active">1</a>
       </li>
       <li>
-        <a class="pagination-page">2</a>
+        <a class="pagination-link pagination-page">2</a>
       </li>
       <li>
-        <a class="pagination-page">3</a>
+        <a class="pagination-link pagination-page">3</a>
       </li>
       <li>
-        <a class="pagination-next">Вперёд</a>
+        <a class="pagination-link pagination-next">Вперёд</a>
       </li>
     </ul>
   </main>

@@ -150,6 +150,7 @@ img {
   line-height: 22px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding: 9px 12px;
 }
 
 .button:hover {
@@ -180,9 +181,7 @@ img {
 
 .header-actions {
   margin-bottom: 35px;
-  display: grid;
-  grid-template-columns: calc(50% - 35px) 1fr min-content min-content;
-  gap: 35px;
+  display: flex;
 }
 
 .nav-list {
@@ -216,10 +215,29 @@ img {
 }
 
 .header-nav-list {
-  display: grid;
-  grid-template-columns: calc(50% - 35px) min-content 1fr min-content;
-  gap: 35px;
+  display: flex;
   margin-bottom: 30px;
+}
+
+.menu-item {
+  margin-left: 35px;
+}
+
+.menu-item-long {
+  flex-basis: 50%;
+  margin: 0;
+}
+
+.menu-item-pushed-right {
+  margin-left: auto;
+}
+
+.menu-item-margin-sm {
+  margin-left: 20px;
+}
+
+.menu-item:first-child {
+  margin-left: 0;
 }
 
 .link-nav {
@@ -321,10 +339,8 @@ img {
 
 .footer-actions {
   grid-area: actions;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   justify-content: end;
-  gap: 50px;
 }
 
 .footer-address {
@@ -333,10 +349,8 @@ img {
 
 .footer-nav {
   grid-area: nav;
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   justify-content: center;
-  gap: 40px;
 }
 
 .footer-phone {
@@ -349,10 +363,8 @@ img {
 }
 
 .social-list {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 .link-academy {
@@ -401,13 +413,15 @@ img {
 .popular-section {
   position: relative;
   overflow: hidden;
+  margin-bottom: 60px;
 }
 
 .slider-buttons {
   position: absolute;
   right: 90px;
-  bottom: 205px;
+  bottom: 130px;
   z-index: 2;
+  margin: 0;
 }
 
 .popular-list {
@@ -420,13 +434,12 @@ img {
 .popular-slide {
   display: grid;
   grid-template-columns: 50% min-content 1fr;
-  grid-template-rows: 220px 80px 1fr 120px;
+  grid-template-rows: 250px 80px 1fr 120px;
   grid-template-areas:
     "image title title"
     "image description description"
     "image actions ."
     "image features features";
-  margin-bottom: 60px;
   background-image: linear-gradient(var(--special-yellow), var(--special-yellow) 140px, white 140px);
   position: relative;
   min-height: 500px;
@@ -434,7 +447,7 @@ img {
 
 .slide-image {
   grid-area: image;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -454,13 +467,13 @@ img {
   grid-area: actions;
   max-width: fit-content;
   align-self: end;
-  margin-bottom: 60px;
 }
 
 .features-list {
   grid-area: features;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  margin: 0;
+  align-items: flex-end;
 }
 
 .popular-slide:before {
@@ -473,7 +486,7 @@ img {
   background-color: transparent;
   color: var(--basic-white);
   position: absolute;
-  right: 0;
+  right: 50px;
   top: 0;
   z-index: 0;
 }
@@ -488,11 +501,19 @@ img {
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 65px;
+}
+
+.feature-item:first-child {
+  margin-left: 0;
 }
 
 .feature-title {
   font-size: 13px;
   line-height: 15px;
+  margin-top: 15px;
 }
 
 .feature-value {
@@ -517,10 +538,8 @@ img {
   line-height: 22px;
   letter-spacing: 0.05em;
   color: var(--basic-black);
-  display: grid;
-  width: 100%;
-  grid-template-rows: 160px min-content;
-  gap: 38px;
+  display: flex;
+  flex-direction: column;
 }
 
 .link-img:active {
@@ -530,6 +549,9 @@ img {
 .link-img:before {
   content: "";
   background-color: var(--special-yellow);
+  width: 160px;
+  height: 160px;
+  margin-bottom: 38px;
 }
 
 .link-img:hover:before,
@@ -555,9 +577,14 @@ img {
 .advantages-nav {
   border-right: 7px solid var(--basic-black);
   padding: 100px 0 0 20px;
-  display: grid;
-  grid-template-rows: repeat(3, min-content);
-  gap: 20px;
+}
+
+.advantages-nav li {
+  margin-bottom: 20px;
+}
+
+.advantages-item {
+  padding: 0 260px 0 115px;
 }
 
 .advantages-title {
@@ -583,8 +610,12 @@ img {
 }
 
 .brands-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-brand {
+  display: block;
 }
 
 /* About us and contacts */
@@ -598,12 +629,17 @@ img {
 
 .about-section,
 .contacts-section {
-  display: grid;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .about-us-title {
-  margin: 0 0 20px;
+  margin: 50px 0;
+}
+
+.about-us p {
+  margin: 0 0 40px;
 }
 
 .about-section {
@@ -614,8 +650,12 @@ img {
   grid-template-rows: repeat(2, min-content) 1fr min-content;
 }
 
+.contacts-map {
+  margin-bottom: 40px;
+}
+
 .about-button {
-  max-width: fit-content;
+  margin-top: auto;
 }
 
 .transportation-list {
@@ -623,10 +663,9 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
   list-style: circle inside;
-  align-self: center;
 }
 
 .transportation-list ::marker {
@@ -677,7 +716,7 @@ img {
 
 .contact-form-button {
   grid-column: 1 / 2;
-  max-width: fit-content;
+  max-width: max-content;
 }
 
 .label, .control {

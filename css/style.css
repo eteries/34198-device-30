@@ -538,8 +538,6 @@ img {
   line-height: 22px;
   letter-spacing: 0.05em;
   color: var(--basic-black);
-  display: flex;
-  flex-direction: column;
 }
 
 .link-img:active {
@@ -548,6 +546,7 @@ img {
 
 .link-img:before {
   content: "";
+  display: block;
   background-color: var(--special-yellow);
   width: 160px;
   height: 160px;
@@ -610,8 +609,8 @@ img {
 }
 
 .brands-list {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .link-brand {
@@ -663,7 +662,7 @@ img {
   font-weight: 800;
   font-size: 16px;
   line-height: 28px;
-  margin: 20px 0 0;
+  margin: 20px 0 30px;
   padding: 0;
   list-style: circle inside;
 }

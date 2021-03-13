@@ -18,22 +18,22 @@
           <img src="img/logo-device.svg" width="163" height="35" alt="Девайс">
         </a>
         <div class="header-actions">
-          <form class="search-form">
+          <form class="search-form menu-item menu-item-long">
             <label class="visually-hidden" for="search-input">Поиск</label>
             <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
             <button class="search-button" type="submit">Найти</button>
           </form>
-          <div class="current-user">
+          <div class="current-user menu-item">
             <a class="link link-icon link-user">Валентин Петухов</a>
             <a class="link link-logout current-user-logout">Выйти</a>
           </div>
-          <a class="link link-icon link-compare">Сравнить</a>
-          <a class="link link-icon link-cart">Корзина</a>
+          <a class="link link-icon link-compare menu-item menu-item-pushed-right">Сравнить</a>
+          <a class="link link-icon link-cart menu-item">Корзина</a>
         </div>
 
         <nav class="header-nav">
           <ul class="header-nav-list list-reset">
-            <li>
+            <li class="menu-item menu-item-long">
               <a class="link link-nav link-plus">Каталог товаров</a>
               <ul class="nav-list nav-list-dropdown list-reset">
                 <li>
@@ -56,13 +56,13 @@
                 </li>
               </ul>
             </li>
-            <li>
+            <li class="menu-item">
               <a class="link link-nav">Доставка</a>
             </li>
-            <li>
+            <li class="menu-item">
               <a class="link link-nav">Гарантия</a>
             </li>
-            <li>
+            <li class="menu-item menu-item-pushed-right">
               <a class="link link-nav">Контакты</a>
             </li>
           </ul>
@@ -75,13 +75,13 @@
     <div class="container">
       <h1 class="title catalog-page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs list-reset">
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Каталог товаров</a>
         </li>
-        <li>
+        <li class="breadcrumbs-item">
           Моноподы для селфи
         </li>
       </ul>
@@ -102,23 +102,23 @@
             <fieldset class="filters-fieldset">
               <legend class="filters-legend">Цвет</legend>
               <ul class="checkbox-list list-reset">
-                <li>
+                <li class="filters-item">
                   <input class="filter-checkbox" type="checkbox" id="filter-color-black" name="color-black" checked>
                   <label class="filter-checkbox-label" for="filter-color-black">Чёрный</label>
                 </li>
-                <li>
+                <li class="filters-item">
                   <input class="filter-checkbox" type="checkbox" id="filter-color-white" name="color-white">
                   <label class="filter-checkbox-label" for="filter-color-white">Белый</label>
                 </li>
-                <li>
+                <li class="filters-item">
                   <input class="filter-checkbox" type="checkbox" id="filter-color-blue" name="color-blue" checked>
                   <label class="filter-checkbox-label" for="filter-color-blue">Синий</label>
                 </li>
-                <li>
+                <li class="filters-item">
                   <input class="filter-checkbox" type="checkbox" id="filter-color-red" name="color-red" checked>
                   <label class="filter-checkbox-label" for="filter-color-red">Красный</label>
                 </li>
-                <li>
+                <li class="filters-item">
                   <input class="filter-checkbox" type="checkbox" id="filter-color-pink" name="color-pink">
                   <label class="filter-checkbox-label" for="filter-color-pink">Розовый</label>
                 </li>
@@ -127,17 +127,17 @@
             <fieldset class="filters-fieldset">
               <legend class="filters-legend">Bluetooth</legend>
               <ul class="radio-list list-reset">
-                <li>
+                <li class="filters-item">
                   <input class="filter-radio" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
                   <label class="filter-radio-label" for="bluetooth-yes">Есть</label>
                 </li>
-                <li>
+                <li class="filters-item">
                   <input class="filter-radio" type="radio" id="bluetooth-no" name="bluetooth" value="no">
                   <label class="filter-radio-label" for="bluetooth-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <button class="button button-block" type="submit">Показать</button>
           </form>
         </section>
 
@@ -160,7 +160,7 @@
               <b class="product-price">1 100 руб.</b>
               <img class="product-image"  src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи‑палка">
               <p class="product-back">
-                <button class="button" type="button">В корзину</button>
+                <button class="button cart-button" type="button">В корзину</button>
                 <button class="add-product-link" type="button">Добавить к сравнению</button>
               </p>
             </li>
@@ -171,7 +171,7 @@
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи‑палка">
               <p class="product-back">
-                <button class="button" type="button">В корзину</button>
+                <button class="button cart-button" type="button">В корзину</button>
                 <button class="add-product-link" type="button">Добавить к сравнению</button>
               </p>
             </li>
@@ -182,7 +182,7 @@
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <p class="product-back">
-                <button class="button" type="button">В корзину</button>
+                <button class="button cart-button" type="button">В корзину</button>
                 <button class="add-product-link" type="button">Добавить к сравнению</button>
               </p>
             </li>
@@ -193,7 +193,7 @@
               <b class="product-price">1 900 руб.</b>
               <img class="product-image" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи‑палка «Следуй за мной»">
               <p class="product-back">
-                <button class="button" type="button">В корзину</button>
+                <button class="button cart-button" type="button">В корзину</button>
                 <button class="add-product-link" type="button">Добавить к сравнению</button>
               </p>
             </li>
@@ -201,19 +201,19 @@
         </section>
 
         <ul class="pagination list-reset">
-          <li>
+          <li class="pagination-item">
             <a class="pagination-link pagination-previous">Назад</a>
           </li>
-          <li>
-            <a class="pagination-link pagination-page pagination-page-active">1</a>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-link-active">1</a>
           </li>
-          <li>
-            <a class="pagination-link pagination-page">2</a>
+          <li class="pagination-item">
+            <a class="pagination-link">2</a>
           </li>
-          <li>
-            <a class="pagination-link pagination-page">3</a>
+          <li class="pagination-item">
+            <a class="pagination-link">3</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a class="pagination-link pagination-next">Вперёд</a>
           </li>
         </ul>
@@ -227,22 +227,22 @@
         <img src="img/logo-device-gold.svg" width="163" height="35" alt="Девайс">
       </a>
       <div class="footer-actions">
-        <div class="current-user">
+        <div class="current-user menu-item">
           <a class="link link-white link-icon link-icon-user">Валентин Петухов</a>
           <a class="link link-white current-user-logout">Выйти</a>
         </div>
-        <a class="link link-white link-icon link-icon-compare">Сравнить</a>
-        <a class="link link-white link-icon link-icon-cart">Корзина</a>
+        <a class="link link-white link-icon link-icon-compare menu-item">Сравнить</a>
+        <a class="link link-white link-icon link-icon-cart menu-item">Корзина</a>
       </div>
       <address class="footer-address">г. Москва, ул. Строителей, 15</address>
       <ul class="list-reset footer-nav">
-        <li>
+        <li class="menu-item">
           <a class="link link-white">Доставка</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a class="link link-white">Гарантия</a>
         </li>
-        <li>
+        <li class="menu-item">
           <a class="link link-white">Контакты</a>
         </li>
       </ul>
@@ -251,13 +251,13 @@
       <section class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-list list-reset">
-          <li>
+          <li class="menu-item menu-item-margin-sm">
             <a class="social-link social-link-fb">Facebook</a>
           </li>
-          <li>
+          <li class="menu-item menu-item-margin-sm">
             <a class="social-link social-link-insta">Instagram</a>
           </li>
-          <li>
+          <li class="menu-item menu-item-margin-sm">
             <a class="social-link social-link-vk">VK</a>
           </li>
         </ul>

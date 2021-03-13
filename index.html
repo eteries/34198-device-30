@@ -20,7 +20,7 @@
         <div class="header-actions">
           <form class="search-form menu-item menu-item-long">
             <label class="visually-hidden" for="search-input">Поиск</label>
-            <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
+            <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту" autocomplete="off">
             <button class="search-button" type="submit">Найти</button>
           </form>
           <a class="link link-icon link-icon-login menu-item">Войти</a>
@@ -30,8 +30,8 @@
 
         <nav class="header-nav">
           <ul class="header-nav-list list-reset">
-            <li class="menu-item menu-item-long">
-              <a class="link link-nav link-plus" href="catalog.html">Каталог товаров</a>
+            <li class="menu-item menu-item-long menu-item-plus">
+              <a class="link link-nav menu-opener" href="catalog.html">Каталог товаров</a>
               <ul class="nav-list nav-list-dropdown list-reset">
                 <li>
                   <a class="link">Виртуальная реальность</a>
@@ -53,10 +53,10 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-nav">
               <a class="link link-nav">Доставка</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-nav">
               <a class="link link-nav">Гарантия</a>
             </li>
             <li class="menu-item menu-item-pushed-right">
@@ -74,7 +74,7 @@
       <section class="popular-section">
         <h2 class="visually-hidden">Популярные товары</h2>
         <p class="slider-buttons">
-          <button class="slider-button">1</button>
+          <button class="slider-button slider-button-active">1</button>
           <button class="slider-button">2</button>
           <button class="slider-button">3</button>
         </p>
@@ -150,7 +150,7 @@
             <a class="link-img link-img-vr">Виртуальная реальность</a>
           </li>
           <li>
-            <a class="link-img link-img-mono">Моноподы для селфи</a>
+            <a class="link-img link-img-mono">Моноподы для&nbsp;селфи</a>
           </li>
           <li>
             <a class="link-img link-img-action">Экшн-камеры</a>
@@ -162,7 +162,7 @@
             <a class="link-img link-img-watch">Умные часы</a>
           </li>
           <li>
-            <a class="link-img img-link-drone">Квадрокоптеры</a>
+            <a class="link-img link-img-drone">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -173,25 +173,31 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages-nav list-reset">
           <li>
-            <button class="button advantages-button" type="button">Доставка</button>
+            <button class="button advantages-button advantages-button-active" type="button">
+              <span>Доставка</span>
+            </button>
           </li>
           <li>
-            <button class="button advantages-button" type="button">Гарантия</button>
+            <button class="button advantages-button" type="button">
+              <span>Гарантия</span>
+            </button>
           </li>
           <li>
-            <button class="button advantages-button active" type="button">Кредит</button>
+            <button class="button advantages-button" type="button">
+              <span>Кредит</span>
+            </button>
           </li>
         </ul>
         <ul class="advantages-list list-reset">
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-delivery advantages-item-active">
             <h3 class="title title-spacing-sparse advantages-title">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-warranty">
             <h3 class="title title-spacing-sparse">Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item-credit">
             <h3 class="title title-spacing-sparse">Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
@@ -231,10 +237,10 @@
           <h2 class="title title-spacing-sparse about-us-title">О нас</h2>
           <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
           <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-          <ul class="transportation-list">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+          <ul class="transportation-list list-reset">
+            <li class="transportation-item">Деловые линии</li>
+            <li class="transportation-item">Автотрейдинг</li>
+            <li class="transportation-item">ЖелДорЭкспедиция</li>
           </ul>
           <a class="button about-button">Подробнее о нас</a>
         </section>
@@ -263,13 +269,13 @@
       </div>
       <address class="footer-address">г. Москва, ул. Строителей, 15</address>
       <ul class="list-reset footer-nav">
-        <li class="menu-item">
+        <li class="menu-item menu-item-footer-nav">
           <a class="link link-nav link-white">Доставка</a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item menu-item-footer-nav">
           <a class="link link-nav link-white">Гарантия</a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item menu-item-footer-nav">
           <a class="link link-nav link-white">Контакты</a>
         </li>
       </ul>
@@ -285,7 +291,7 @@
             <a class="social-link social-link-insta">Instagram</a>
           </li>
           <li class="menu-item menu-item-margin-sm">
-            <a class="social-link social-link-vk">VK</a>
+            <a class="social-link social-link-tw">VK</a>
           </li>
         </ul>
       </section>

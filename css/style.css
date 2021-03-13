@@ -840,10 +840,10 @@ img {
 
 .catalog {
   background-image:
-    linear-gradient(to right, var(--basic-gray-dark), var(--basic-gray-dark) 50%, var(--basic-gray-light) 50%),
+    linear-gradient(to right, var(--basic-gray-dark) 50%, var(--basic-gray-light) 50%),
     linear-gradient(to right, var(--basic-gray-light), var(--basic-gray-light) 50%, var(--basic-white) 50%);
   background-size:
-    auto 70px,
+    100% 70px,
     auto auto;
   background-repeat:
     no-repeat,

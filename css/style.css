@@ -83,7 +83,10 @@ button {
 }
 
 .page-body {
-  font: 15px/20px "Open Sans", "Arial", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 300;
   color: var(--basic-black);
   background-color: transparent;
   margin: 0;
@@ -972,12 +975,12 @@ button {
 .transportation-item:before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 10px;
   left: 0;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1ps solid var(--basic-gray-light);
+  border: 1px solid var(--basic-gray-light);
 }
 
 /* Modal */

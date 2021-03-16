@@ -20,21 +20,21 @@
         <div class="header-actions">
           <form class="search-form menu-item menu-item-long">
             <label class="visually-hidden" for="search-input">Поиск</label>
-            <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту">
+            <input class="search-input" id="search-input" type="search" placeholder="Поиск по сайту" autocomplete="off">
             <button class="search-button" type="submit">Найти</button>
           </form>
           <div class="current-user menu-item">
-            <a class="link link-icon link-user">Валентин Петухов</a>
+            <a class="link link-icon link-icon-login">Валентин Петухов</a>
             <a class="link link-logout current-user-logout">Выйти</a>
           </div>
-          <a class="link link-icon link-compare menu-item menu-item-pushed-right">Сравнить</a>
-          <a class="link link-icon link-cart menu-item">Корзина</a>
+          <a class="link link-icon link-icon-compare menu-item menu-item-pushed-right">Сравнить</a>
+          <a class="link link-icon link-icon-cart menu-item">Корзина</a>
         </div>
 
         <nav class="header-nav">
           <ul class="header-nav-list list-reset">
-            <li class="menu-item menu-item-long">
-              <a class="link link-nav link-plus">Каталог товаров</a>
+            <li class="menu-item menu-item-long menu-item-plus">
+              <a class="link link-nav menu-opener">Каталог товаров</a>
               <ul class="nav-list nav-list-dropdown list-reset">
                 <li>
                   <a class="link">Виртуальная реальность</a>
@@ -56,10 +56,10 @@
                 </li>
               </ul>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-nav">
               <a class="link link-nav">Доставка</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-nav">
               <a class="link link-nav">Гарантия</a>
             </li>
             <li class="menu-item menu-item-pushed-right">
@@ -94,50 +94,59 @@
           <form class="filters-form" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filters-fieldset">
               <legend class="filters-legend">Стоимость</legend>
-              <div class="range-control">
-                <span class="handle">От 0</span>
-                <span class="handle">до 5000</span>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar" style="width: 56%; margin-left: 0"></div>
+                  </div>
+                  <div class="handle handle-min" tabindex="0" style="left: 0">
+                    <span class="value min-value">от 0</span>
+                  </div>
+                  <div class="handle handle-max" tabindex="0" style="left: 57%">
+                    <span class="value max-value">до 5000</span>
+                  </div>
+                </div>
               </div>
             </fieldset>
             <fieldset class="filters-fieldset">
               <legend class="filters-legend">Цвет</legend>
-              <ul class="checkbox-list list-reset">
-                <li class="filters-item">
-                  <input class="filter-checkbox" type="checkbox" id="filter-color-black" name="color-black" checked>
-                  <label class="filter-checkbox-label" for="filter-color-black">Чёрный</label>
+              <ul class="filters-list list-reset">
+                <li class="checkbox-item">
+                  <input class="filter-control filter-checkbox visually-hidden" type="checkbox" id="filter-color-black" name="color-black" checked>
+                  <label class="filter-label filter-checkbox-label" for="filter-color-black">Чёрный</label>
                 </li>
-                <li class="filters-item">
-                  <input class="filter-checkbox" type="checkbox" id="filter-color-white" name="color-white">
-                  <label class="filter-checkbox-label" for="filter-color-white">Белый</label>
+                <li class="checkbox-item">
+                  <input class="filter-control filter-checkbox visually-hidden" type="checkbox" id="filter-color-white" name="color-white">
+                  <label class="filter-label filter-checkbox-label" for="filter-color-white">Белый</label>
                 </li>
-                <li class="filters-item">
-                  <input class="filter-checkbox" type="checkbox" id="filter-color-blue" name="color-blue" checked>
-                  <label class="filter-checkbox-label" for="filter-color-blue">Синий</label>
+                <li class="checkbox-item">
+                  <input class="filter-control filter-checkbox visually-hidden" type="checkbox" id="filter-color-blue" name="color-blue" checked>
+                  <label class="filter-label filter-checkbox-label" for="filter-color-blue">Синий</label>
                 </li>
-                <li class="filters-item">
-                  <input class="filter-checkbox" type="checkbox" id="filter-color-red" name="color-red" checked>
-                  <label class="filter-checkbox-label" for="filter-color-red">Красный</label>
+                <li class="checkbox-item">
+                  <input class="filter-control filter-checkbox visually-hidden" type="checkbox" id="filter-color-red" name="color-red" checked>
+                  <label class="filter-label filter-checkbox-label" for="filter-color-red">Красный</label>
                 </li>
-                <li class="filters-item">
-                  <input class="filter-checkbox" type="checkbox" id="filter-color-pink" name="color-pink">
-                  <label class="filter-checkbox-label" for="filter-color-pink">Розовый</label>
+                <li class="checkbox-item">
+                  <input class="filter-control filter-checkbox visually-hidden" type="checkbox" id="filter-color-pink" name="color-pink">
+                  <label class="filter-label filter-checkbox-label" for="filter-color-pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filters-fieldset">
               <legend class="filters-legend">Bluetooth</legend>
-              <ul class="radio-list list-reset">
-                <li class="filters-item">
-                  <input class="filter-radio" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
-                  <label class="filter-radio-label" for="bluetooth-yes">Есть</label>
+              <ul class="filters-list list-reset">
+                <li class="radio-item">
+                  <input class="filter-control filter-radio visually-hidden" type="radio" id="bluetooth-yes" name="bluetooth" value="yes" checked>
+                  <label class="filter-label filter-radio-label" for="bluetooth-yes">Есть</label>
                 </li>
-                <li class="filters-item">
-                  <input class="filter-radio" type="radio" id="bluetooth-no" name="bluetooth" value="no">
-                  <label class="filter-radio-label" for="bluetooth-no">Нет</label>
+                <li class="radio-item">
+                  <input class="filter-control filter-radio visually-hidden" type="radio" id="bluetooth-no" name="bluetooth" value="no">
+                  <label class="filter-label filter-radio-label" for="bluetooth-no">Нет</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button button-block" type="submit">Показать</button>
+            <button class="button button-block filters-button" type="submit">Показать</button>
           </form>
         </section>
 
@@ -146,8 +155,8 @@
           <a class="sorting-link sorting-link-active">По цене</a>
           <a class="sorting-link">По типу</a>
           <a class="sorting-link">По популярности</a>
-          <a class="sorting-link sorting-link-up sorting-link-active">По возрастанию</a>
-          <a class="sorting-link sorting-link-down">По убыванию</a>
+          <a class="sorting-link sorting-link-up" aria-label="По возрастанию"></a>
+          <a class="sorting-link sorting-link-down sorting-link-active" aria-label="По убыванию"></a>
         </section>
 
         <section class="products-section">
@@ -155,7 +164,7 @@
           <ul class="products-list list-reset">
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a>Любительская селфи‑палка</a>
+                <a>Любительская <b>селфи-палка</b></a>
               </h3>
               <b class="product-price">1 100 руб.</b>
               <img class="product-image"  src="img/products/item-1.jpg" width="360" height="380" alt="Любительская селфи‑палка">
@@ -166,7 +175,7 @@
             </li>
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a>Профессиональная селфи‑палка</a>
+                <a>Профессиональная <b>селфи-палка</b></a>
               </h3>
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-2.jpg" width="360" height="380" alt="Профессиональная селфи‑палка">
@@ -177,7 +186,7 @@
             </li>
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a>Непотопляемая селфи‑палка</a>
+                <a>Непотопляемая <b>селфи-палка</b></a>
               </h3>
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
@@ -188,7 +197,7 @@
             </li>
             <li class="product-item product-item-new">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a>Селфи‑палка «Следуй за мной»</a>
+                <a><b>Селфи-палка</b> «Следуй за мной»</a>
               </h3>
               <b class="product-price">1 900 руб.</b>
               <img class="product-image" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи‑палка «Следуй за мной»">
@@ -228,7 +237,7 @@
       </a>
       <div class="footer-actions">
         <div class="current-user menu-item">
-          <a class="link link-white link-icon link-icon-user">Валентин Петухов</a>
+          <a class="link link-white link-icon link-icon-login link-icon-current">Валентин Петухов</a>
           <a class="link link-white current-user-logout">Выйти</a>
         </div>
         <a class="link link-white link-icon link-icon-compare menu-item">Сравнить</a>
@@ -236,14 +245,14 @@
       </div>
       <address class="footer-address">г. Москва, ул. Строителей, 15</address>
       <ul class="list-reset footer-nav">
-        <li class="menu-item">
-          <a class="link link-white">Доставка</a>
+        <li class="menu-item menu-item-footer-nav">
+          <a class="link link-nav link-white">Доставка</a>
         </li>
-        <li class="menu-item">
-          <a class="link link-white">Гарантия</a>
+        <li class="menu-item menu-item-footer-nav">
+          <a class="link link-nav link-white">Гарантия</a>
         </li>
-        <li class="menu-item">
-          <a class="link link-white">Контакты</a>
+        <li class="menu-item menu-item-footer-nav">
+          <a class="link link-nav link-white">Контакты</a>
         </li>
       </ul>
       <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
@@ -258,7 +267,7 @@
             <a class="social-link social-link-insta">Instagram</a>
           </li>
           <li class="menu-item menu-item-margin-sm">
-            <a class="social-link social-link-vk">VK</a>
+            <a class="social-link social-link-tw">TW</a>
           </li>
         </ul>
       </section>

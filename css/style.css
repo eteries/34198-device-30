@@ -67,7 +67,6 @@ a {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 button {
@@ -224,12 +223,13 @@ button {
   margin: 20px 0 0;
   padding: 0 60px 30px;
   display: grid;
-  grid-template-rows: 45px 60px min-content;
+  grid-template-rows: minmax(45px, min-content) minmax(60px, min-content) min-content;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-list {
@@ -254,13 +254,13 @@ button {
   z-index: 2;
 }
 
-.menu-item-plus {
-  display: flex;
+.link-nav-plus {
+  display: inline-flex;
   align-items: center;
   z-index: 2;
 }
 
-.menu-item-plus:after {
+.link-nav-plus:after {
   content: "";
   width: 16px;
   height: 16px;
@@ -269,12 +269,16 @@ button {
   background-repeat: no-repeat;
 }
 
-.menu-opener:hover:after {
+.link-nav-plus:hover:after {
   opacity: 1;
 }
 
-.menu-opener:hover + .nav-list-dropdown,
-.menu-opener:focus + .nav-list-dropdown,
+.link-nav-plus:focus {
+  outline-offset: 0;
+}
+
+.link-nav-plus:hover + .nav-list-dropdown,
+.link-nav-plus:focus + .nav-list-dropdown,
 .nav-list-dropdown:hover,
 .nav-list-dropdown:focus-within {
   display: grid;
@@ -286,6 +290,7 @@ button {
 
 .header-nav-list {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   z-index: 2;
   margin: 29px 0 20px;
@@ -463,6 +468,7 @@ button {
   display: flex;
   align-items: start;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .footer-address {
@@ -472,6 +478,7 @@ button {
 .footer-nav {
   grid-area: nav;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-phone {
@@ -488,6 +495,7 @@ button {
   margin: 32px 0 0 144px;
   font-size: 0;
   line-height: 0;
+  flex-wrap: wrap;
 }
 
 .link-academy {
@@ -645,7 +653,7 @@ button {
 .popular-slide {
   display: grid;
   grid-template-columns: 50% min-content 1fr;
-  grid-template-rows: 250px 80px 1fr 124px;
+  grid-template-rows: minmax(250px, min-content) minmax(80px, min-content) 1fr minmax(124px, min-content);
   grid-template-areas:
     "image title title"
     "image description description"
@@ -657,7 +665,7 @@ button {
   column-gap: 20px;
 }
 
-.slide-image {
+.slide-image-wrapper {
   grid-area: image;
   display: flex;
   justify-content: center;
@@ -665,10 +673,14 @@ button {
   margin: 12px 18px 0 0;
 }
 
+.slide-image {
+  object-fit: contain;
+}
+
 .slide-title {
   grid-area: title;
   position: relative;
-  margin: 109px 0 30px;
+  margin: 109px 0 25px;
 }
 
 .slide-description {
@@ -687,6 +699,7 @@ button {
 .features-list {
   grid-area: features;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   align-items: flex-end;
 }
@@ -718,11 +731,11 @@ button {
   letter-spacing: 0.1em;
   display: flex;
   flex-direction: column-reverse;
-  margin-left: 62px;
+  margin: 10px 62px 0 0;
 }
 
-.feature-item:first-child {
-  margin-left: 0;
+.feature-item:last-child {
+  margin-right: 0;
 }
 
 .feature-title {
@@ -1001,16 +1014,40 @@ button {
 /* Modal */
 
 .modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   background-color: var(--basic-white);
   color: var(--basic-black);
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
   width: 960px;
-  padding: 90px 100px 55px;
-  position: relative;
+  padding: 90px 100px 60px;
+  z-index: 10;
+}
+
+.modal-form {
+  top: 120px;
+  bottom: auto;
+  display: none;
+}
+
+.modal-map {
+  width: 960px;
+  height: 572px;
+  display: none;
 }
 
 .modal-padding-0 {
   padding: 0;
+}
+
+.map-iframe {
+  width: 100%;
+  border: none;
+  object-fit: cover;
 }
 
 .close-button {
@@ -1066,12 +1103,14 @@ button {
 }
 
 .contact-form-message {
+  grid-column: 1 / -1;
   margin: 0;
 }
 
 .contact-form-button {
   grid-column: 1 / 2;
-  max-width: max-content;
+  max-width: 200px;
+  margin-top: 16px;
 }
 
 .label, .control {
@@ -1079,7 +1118,7 @@ button {
 }
 
 .label {
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
 .control {
@@ -1090,9 +1129,16 @@ button {
 
 .control {
   background-color: var(--special-gray-lighter);
-  color: var(--basic-black);
+  color: var(--basic-dark);
   border: 2px solid transparent;
-  padding: 17px 20px;
+  padding: 16px 20px 15px 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.control-textarea {
+  min-height: 167px;
 }
 
 .control::placeholder {
@@ -1104,8 +1150,10 @@ button {
   background-color: var(--special-gray-darker);
 }
 
-.control:focus {
-  border-color: var(--special-yellow-dark);
+.control:focus,
+.control:hover:focus {
+  border-color: var(--special-yellow);
+  background-color: var(--basic-white);
   outline: 0;
 }
 

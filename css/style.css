@@ -1158,7 +1158,7 @@ button {
   content: "";
   position: absolute;
   right: -28px;
-  top: 1px;
+  top: 3px;
   width: 14px;
   height: 14px;
   background-image: url("../img/icons/icon-nav-arrow.svg");

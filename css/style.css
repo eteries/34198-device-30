@@ -370,7 +370,8 @@ button {
 }
 
 .search-input::-webkit-search-cancel-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .search-input:focus {
@@ -1337,7 +1338,8 @@ button {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
   color: var(--basic-black);
 }
 
@@ -1511,6 +1513,7 @@ button {
   padding: 0 20px 0 72px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .sorting-link {
@@ -1679,6 +1682,7 @@ button {
   background-color: var(--special-gray-lighter);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .pagination-item {

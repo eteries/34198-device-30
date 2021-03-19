@@ -1155,7 +1155,6 @@ button {
 .control:hover:focus {
   border-color: var(--special-yellow);
   background-color: var(--basic-white);
-  outline: 0;
 }
 
 .control:hover {
@@ -1419,6 +1418,10 @@ button {
   opacity: 1;
 }
 
+.filter-control:focus + .filter-label {
+  opacity: 0.6;
+}
+
 .filter-control:disabled + .filter-label {
   opacity: 0.25;
   pointer-events: none;
@@ -1623,6 +1626,10 @@ button {
 
 .product-title b {
   white-space: nowrap;
+}
+
+.product-link {
+  color: inherit;
 }
 
 .product-price {

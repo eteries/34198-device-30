@@ -74,9 +74,9 @@
       <section class="popular-section">
         <h2 class="visually-hidden">Популярные товары</h2>
         <p class="slider-buttons">
-          <button class="slider-button slider-button-active" aria-label="Слайд 1 - Палка для селфи"></button>
-          <button class="slider-button" aria-label="Слайд 2 - Фитнес-браслет"></button>
-          <button class="slider-button" aria-label="Слайд 3 - Квадракоптер"></button>
+          <button class="slider-button slider-button-active" data-num="01" aria-label="Слайд 1 - Палка для селфи"></button>
+          <button class="slider-button" data-num="02" aria-label="Слайд 2 - Фитнес-браслет"></button>
+          <button class="slider-button" data-num="03" aria-label="Слайд 3 - Квадракоптер"></button>
         </p>
         <ol class="popular-list list-reset">
           <li class="popular-slide popular-slide-active" data-num="01">
@@ -174,32 +174,32 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <ul class="advantages-nav list-reset">
           <li>
-            <button class="button advantages-button advantages-button-active" type="button">
+            <button class="button advantages-button advantages-button-active" type="button" data-num="01">
               <span>Доставка</span>
             </button>
           </li>
           <li>
-            <button class="button advantages-button" type="button">
+            <button class="button advantages-button" type="button" data-num="02">
               <span>Гарантия</span>
             </button>
           </li>
           <li>
-            <button class="button advantages-button" type="button">
+            <button class="button advantages-button" type="button" data-num="03">
               <span>Кредит</span>
             </button>
           </li>
         </ul>
         <ul class="advantages-list list-reset">
-          <li class="advantages-item advantages-item-delivery advantages-item-active">
+          <li class="advantages-item advantages-item-delivery advantages-item-active" data-num="01">
             <h3 class="title title-spacing-sparse advantages-title">Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="advantages-item advantages-item-warranty">
-            <h3 class="title title-spacing-sparse">Гарантия</h3>
+          <li class="advantages-item advantages-item-warranty" data-num="02">
+            <h3 class="title title-spacing-sparse advantages-title">Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
           </li>
-          <li class="advantages-item advantages-item-credit">
-            <h3 class="title title-spacing-sparse">Кредит</h3>
+          <li class="advantages-item advantages-item-credit" data-num="03">
+            <h3 class="title title-spacing-sparse advantages-title">Кредит</h3>
             <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
           </li>
         </ul>
@@ -252,7 +252,7 @@
           <a href="#" class="contacts-map">
             <img src="img/map-sm.jpg" width="560" height="222" alt="Карта проезда">
           </a>
-          <button class="button about-button">Напишите нам</button>
+          <button class="button about-button button-contacts">Напишите нам</button>
         </section>
       </div>
     </div>
@@ -303,22 +303,22 @@
 
   <section class="modal modal-form">
     <h2 class="visually-hidden">Написать нам</h2>
-    <button class="close-button" type="button" aria-label="Закрыть"></button>
     <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="contact-form-name">
         <label class="label" for="contact-name">Ваше имя:</label>
-        <input class="control control-text" type="text" id="contact-name" placeholder="Имя Фамилия">
+        <input class="control control-text" type="text" id="contact-name" name="contact-name" placeholder="Имя Фамилия">
       </p>
       <p class="contact-form-email">
         <label class="label" for="contact-email">Ваш e-mail:</label>
-        <input class="control control-text" type="email" id="contact-email" placeholder="email@example.com">
+        <input class="control control-text" type="email" id="contact-email" name="contact-email" placeholder="email@example.com">
       </p>
       <p class="contact-form-message">
         <label class="label" for="contact-message">Текст письма:</label>
-        <textarea class="control control-textarea" id="contact-message" placeholder="В свободной форме"></textarea>
+        <textarea class="control control-textarea" id="contact-message"  name="contact-message" placeholder="В свободной форме"></textarea>
       </p>
       <button class="button contact-form-button" type="submit">Отправить</button>
     </form>
+    <button class="close-button" type="button" aria-label="Закрыть"></button>
   </section>
 
   <section class="modal modal-padding-0 modal-map">
@@ -326,5 +326,7 @@
     <button class="close-button" type="button" aria-label="Закрыть"></button>
     <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779953!2d37.52742931590691!3d55.68703098053586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa%20Stroiteley%2C%2015%2C%20Moskva%2C%20119311!5e0!3m2!1sen!2sru!4v1616023254727!5m2!1sen!2sru" width="900" height="600" allowfullscreen="" loading="lazy"></iframe>
   </section>
+
+  <script src="js/scripts.min.js"></script>
   </body>
 </html>

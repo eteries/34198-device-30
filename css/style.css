@@ -624,14 +624,14 @@ button {
 }
 
 .slider-button:focus {
-  outline: none;
+  outline-offset: 4px;
 }
 
 .slider-button:last-child {
   margin-right: 0;
 }
 
-.slider-button-active:after {
+.slider-button:after {
   content: "";
   position: absolute;
   width: 6px;
@@ -641,18 +641,15 @@ button {
   border: 1px solid var(--basic-black);
   transform: translate(-50%, -50%);
   border-radius: 50%;
-
+  opacity: 0;
 }
 
-.popular-list {
-  counter-reset: li;
-  width: 300%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.slider-button-active:after {
+  opacity: 1;
 }
 
 .popular-slide {
-  display: grid;
+  display: none;
   grid-template-columns: 50% min-content 1fr;
   grid-template-rows: minmax(250px, min-content) minmax(80px, min-content) 1fr minmax(124px, min-content);
   grid-template-areas:
@@ -664,6 +661,10 @@ button {
   position: relative;
   min-height: 506px;
   column-gap: 20px;
+}
+
+.popular-slide-active {
+  display: grid;
 }
 
 .slide-image-wrapper {
@@ -706,8 +707,7 @@ button {
 }
 
 .popular-slide:before {
-  content: counter(li, decimal-leading-zero);
-  counter-increment: li;
+  content: attr(data-num);
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: 800;
   font-size: 179px;
@@ -902,7 +902,7 @@ button {
 }
 
 .advantages-button:focus {
-  outline: none;
+  outline-offset: 4px;
 }
 
 /* Brands */

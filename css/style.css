@@ -4,7 +4,7 @@
   font-family: "Gilroy";
   font-weight: 300;
   font-style: normal;
-  src: local("Gilroy"),
+  src: local("Gilroy Light"),
        url("../fonts/gilroylight.woff2") format("woff2"),
        url("../fonts/gilroylight.woff") format("woff");
 }
@@ -13,7 +13,7 @@
   font-family: "Gilroy";
   font-weight: 800;
   font-style: normal;
-  src: local("Gilroy"),
+  src: local("Gilroy ExtraBold"),
        url("../fonts/gilroyextrabold.woff2") format("woff2"),
        url("../fonts/gilroyextrabold.woff") format("woff");
 }
@@ -31,7 +31,7 @@
   font-family: "Open Sans";
   font-weight: 400;
   font-style: normal;
-  src: local("Open Sans Light"),
+  src: local("Open Sans Regular"),
        url("../fonts/opensans.woff2") format("woff2"),
        url("../fonts/opensans.woff") format("woff");
 }
@@ -1159,6 +1159,7 @@ button {
 
 .control-textarea {
   min-height: 167px;
+  resize: none;
 }
 
 .control::placeholder {

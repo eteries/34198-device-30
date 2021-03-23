@@ -33,7 +33,7 @@
 
         <nav class="header-nav">
           <ul class="header-nav-list list-reset">
-            <li class="menu-item menu-item-long">
+            <li class="menu-item menu-item-long menu-item-parent">
               <a class="link link-nav link-nav-plus" href="404.html">Каталог товаров</a>
               <ul class="nav-list nav-list-dropdown list-reset">
                 <li>
@@ -99,11 +99,15 @@
                   <div class="range-scale">
                     <div class="range-bar" style="width: 56%; margin-left: 0"></div>
                   </div>
-                  <div class="range-handle range-handle-min" tabindex="0" style="left: 0">
-                    <span class="range-value range-value-min">от 0</span>
+                  <div class="range-handle range-handle-min" style="left: 0">
+                    <label class="range-value range-value-min">
+                      от <input class="range-input" type="text" name="min-price" value="0">
+                    </label>
                   </div>
-                  <div class="range-handle range-handle-max" tabindex="0" style="left: 57%">
-                    <span class="range-value range-value-max">до 5000</span>
+                  <div class="range-handle range-handle-max" style="left: 57%">
+                    <label class="range-value range-value-max">
+                      до <input class="range-input" type="text" name="max-price" value="5000">
+                    </label>
                   </div>
                 </div>
               </div>
@@ -164,46 +168,46 @@
           <ul class="products-list list-reset">
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a class="product-link" href="404.html">Любительская <b>селфи-палка</b></a>
+                <a class="product-link" href="404.html">Любительская селфи&#8209;палка</a>
               </h3>
               <b class="product-price">1 100 руб.</b>
               <img class="product-image"  src="img/products/item-1.jpg" width="360" height="380" alt="Обычная селфи‑палка">
               <p class="product-back">
-                <button class="button cart-button" type="button" aria-label="Добавить любительскую селфи-палку в корзину">В корзину</button>
-                <button class="add-product-link" type="button" aria-label="Добавить любительскую селфи-палку в список сравнения">Добавить к сравнению</button>
+                <a class="button cart-button" href="404.html" aria-label="Добавить любительскую селфи-палку в корзину">В корзину</a>
+                <a class="add-product-link" href="404.html" aria-label="Добавить любительскую селфи-палку в список сравнения">Добавить к сравнению</a>
               </p>
             </li>
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a class="product-link" href="404.html">Профессиональная <b>селфи-палка</b></a>
+                <a class="product-link" href="404.html">Профессиональная селфи&#8209;палка</a>
               </h3>
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-2.jpg" width="360" height="380" alt="Селфи‑палка с дополнительным функционалом">
               <p class="product-back">
-                <button class="button cart-button" type="button" aria-label="Добавить профессиональную селфи-палку в корзину">В корзину</button>
-                <button class="add-product-link" type="button" aria-label="Добавить профессиональную селфи-палку в список сравнения">Добавить к сравнению</button>
+                <a class="button cart-button" href="404.html" aria-label="Добавить профессиональную селфи-палку в корзину">В корзину</a>
+                <a class="add-product-link" href="404.html" aria-label="Добавить профессиональную селфи-палку в список сравнения">Добавить к сравнению</a>
               </p>
             </li>
             <li class="product-item">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a class="product-link" href="404.html">Непотопляемая <b>селфи-палка</b></a>
+                <a class="product-link" href="404.html">Непотопляемая селфи&#8209;палка</a>
               </h3>
               <b class="product-price">1 500 руб.</b>
               <img class="product-image"  src="img/products/item-3.jpg" width="360" height="380" alt="Селфи-палка с защитой от воды">
               <p class="product-back">
-                <button class="button cart-button" type="button" aria-label="Добавить защищённую селфи-палку в корзину">В корзину</button>
-                <button class="add-product-link" type="button" aria-label="Добавить защищённуюую селфи-палку в список сравнения">Добавить к сравнению</button>
+                <a class="button cart-button" href="404.html" aria-label="Добавить защищённую селфи-палку в корзину">В корзину</a>
+                <a class="add-product-link" href="404.html" aria-label="Добавить защищённуюую селфи-палку в список сравнения">Добавить к сравнению</a>
               </p>
             </li>
             <li class="product-item product-item-new">
               <h3 class="title title-md title-spacing-dense product-title">
-                <a class="product-link" href="404.html"><b>Селфи-палка</b> «Следуй за мной»</a>
+                <a class="product-link" href="404.html">Селфи&#8209;палка «Следуй за мной»</a>
               </h3>
               <b class="product-price">1 900 руб.</b>
               <img class="product-image" src="img/products/item-4.jpg" width="360" height="380" alt="Селфи‑палка с ручкой в виде человеческой руки для фото-эффекта">
               <p class="product-back">
-                <button class="button cart-button" type="button" aria-label="Добавить селфи-палку «Следуй за мной» в корзину">В корзину</button>
-                <button class="add-product-link" type="button" aria-label="Добавить селфи-палку «Следуй за мной» в список сравнения">Добавить к сравнению</button>
+                <a class="button cart-button" href="404.html" aria-label="Добавить селфи-палку «Следуй за мной» в корзину">В корзину</a>
+                <a class="add-product-link" href="404.html" aria-label="Добавить селфи-палку «Следуй за мной» в список сравнения">Добавить к сравнению</a>
               </p>
             </li>
           </ul>

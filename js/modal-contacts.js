@@ -19,7 +19,8 @@ try {
   isStorageSupport = false;
 }
 
-btnContactsOpen.addEventListener('click', () => {
+btnContactsOpen.addEventListener('click', (event) => {
+  event.preventDefault();
   modalContacts.classList.add('modal-active');
 
   messageInput.focus();
